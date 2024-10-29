@@ -17,12 +17,12 @@
             }
             .overlay {
                 overflow-y:scroll;
-                max-height:500px;
+                max-height:600px;
             }
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container" style="margin-bottom: 40px;">
             <canvas class="chart" id="myChart"></canvas>
         </div>
         <div class="container overlay">
