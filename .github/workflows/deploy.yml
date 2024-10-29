@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to specific directory
         env:
           PYTHON_ENV: production
-        run:
+        run: |
           TARGET_DIR=~/python  # Define el directorio objetivo
           
           # Crear el directorio si no existe
