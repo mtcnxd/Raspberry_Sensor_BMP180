@@ -1,0 +1,14 @@
+name: Deploy to Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main  # Ejecuta el deploy solo cuando haya un push a la rama "main"
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # Usa el runner self-hosted configurado para este proyecto
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
