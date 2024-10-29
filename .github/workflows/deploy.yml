@@ -12,3 +12,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - run:|
+          TARGET_DIR=~/python  # Define el directorio objetivo
+          
+          # Crear el directorio si no existe
+          mkdir -p "$TARGET_DIR"
+          
+          # Copiar los archivos Python al directorio objetivo
+          cp -R ./*.py "$TARGET_DIR"
+
+          echo "Archivos Python desplegados en $TARGET_DIR"
