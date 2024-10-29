@@ -27,8 +27,10 @@ jobs:
           
           cp -R ./*.py "$PYTHON_DIR"
 
+          echo "Archivos Python desplegados en $PYTHON_DIR"
+
           # Copiar los archivos html al directorio objetivo
 
           cp -R ./html "$PHP_DIR"
 
-          echo "Archivos Python desplegados en $PYTHON_DIR"
+          echo "Archivos Python desplegados en $PHP_DIR"
