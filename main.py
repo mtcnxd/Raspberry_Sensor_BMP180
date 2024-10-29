@@ -39,4 +39,5 @@ temperature = sensor.sensorInformation()[0]
 print("Current Temperature: {0:.2f}".format(temperature))
 
 if temperature > setpoint:
+    # Adding comment to test deploy
     requests.request('POST', url, headers=headers, data=str(temperature))
