@@ -15,18 +15,22 @@
                 max-height:200px;
                 margin-bottom: 30px;
             }
+            .overlay {
+                overflow-y:scroll;
+                max-height:500px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <canvas class="chart" id="myChart"></canvas>
         </div>
-        <div class="container">
+        <div class="container overlay">
             <?php
             include 'classes/mySQL.php';
 
             $dataBase = new MySQL();
-            $results  = $dataBase->mySQLquery("SELECT * FROM temperature ORDER BY created_at DESC LIMIT 20");
+            $results  = $dataBase->mySQLquery("SELECT * FROM temperature ORDER BY created_at DESC LIMIT 50");
 
             $counter = 1;
             echo "<table class='table table-hover'>";
@@ -61,7 +65,3 @@
         });
     </script>
 </html>
-
-<?="Hola mundo"?>
-<?="Hola mundo"?>
-<?="Hola mundo"?>
