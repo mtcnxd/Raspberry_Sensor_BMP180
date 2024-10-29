@@ -61,3 +61,5 @@
         });
     </script>
 </html>
+
+<?="Hola mundo"?>

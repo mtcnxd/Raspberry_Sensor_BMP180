@@ -17,12 +17,17 @@ jobs:
         env:
           PYTHON_ENV: production
         run: |
-          TARGET_DIR=~/python  # Define el directorio objetivo
+          PYTHON_DIR=~/python  # Define el directorio objetivo
+          PHP_DIR=/html        # Define el directorio de los archivos web
           
           # Crear el directorio si no existe
-          mkdir -p "$TARGET_DIR"
+          mkdir -p "$PYTHON_DIR"
+
+          mkdir -p "$PHP_DIR"
           
           # Copiar los archivos Python al directorio objetivo
-          cp -R ./*.py "$TARGET_DIR"
+          cp -R ./*.py "$PYTHON_DIR"
 
-          echo "Archivos Python desplegados en $TARGET_DIR"
+          cp -R ./html "$PHP_DIR"
+
+          echo "Archivos Python desplegados en $PYTHON_DIR"
