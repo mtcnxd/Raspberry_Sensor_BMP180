@@ -22,11 +22,12 @@ jobs:
           
           # Crear el directorio si no existe
           mkdir -p "$PYTHON_DIR"
-
-          mkdir -p "$PHP_DIR"
           
           # Copiar los archivos Python al directorio objetivo
+          
           cp -R ./*.py "$PYTHON_DIR"
+
+          # Copiar los archivos html al directorio objetivo
 
           cp -R ./html "$PHP_DIR"
 
