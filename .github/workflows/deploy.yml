@@ -17,8 +17,8 @@ jobs:
         env:
           PYTHON_ENV: production
         run: |
-          PYTHON_DIR=~/python  # Define el directorio objetivo
-          PHP_DIR=/html        # Define el directorio de los archivos web
+          PYTHON_DIR=~/python     # Define el directorio objetivo
+          PHP_DIR=/var/www/html   # Define el directorio de los archivos web
           
           # Crear el directorio si no existe
           mkdir -p "$PYTHON_DIR"
